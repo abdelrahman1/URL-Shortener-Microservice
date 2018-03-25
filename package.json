@@ -1,0 +1,31 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon bin/dev",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && babel server -s -d dist",
+    "production": "npm run build && nodemon bin/production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-promise-router": "^3.0.1",
+    "id-shorter": "^0.1.1",
+    "mongoose": "^5.0.11"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.2"
+  }
+}
